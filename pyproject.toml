@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abs-waterfall"
+version = "0.1.0"
+description = "Standard-library-only ABS cash-flow waterfall engine with Decimal fixed-scale accounts"
+requires-python = ">=3.13"
+
+[project.scripts]
+abs-waterfall = "abs_waterfall.cli:main"
+
+[tool.setuptools]
+packages = ["abs_waterfall"]

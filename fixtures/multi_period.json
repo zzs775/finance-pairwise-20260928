@@ -1,0 +1,56 @@
+{
+  "tranches": [
+    {"id": "A", "seniority": 1, "initial_balance": "700.00", "coupon_rate": "0.05"},
+    {"id": "B", "seniority": 2, "initial_balance": "200.00", "coupon_rate": "0.08"},
+    {"id": "EQ", "seniority": 3, "initial_balance": "100.00", "coupon_rate": "0"}
+  ],
+  "fees": [
+    {"id": "servicing", "rate": "0.01", "fixed_amount": "0"}
+  ],
+  "reserve": {"target_rate": "0.02", "min_balance": "5.00", "releasable": true},
+  "profiles": [
+    {
+      "id": "normal",
+      "principal_mode": "sequential",
+      "interest_order": ["A", "B", "EQ"],
+      "principal_order": ["A", "B", "EQ"]
+    },
+    {
+      "id": "lockout",
+      "principal_mode": "pro_rata",
+      "interest_order": ["A", "B", "EQ"],
+      "principal_order": ["A", "B", "EQ"]
+    }
+  ],
+  "triggers": [
+    {"id": "dlq_ge_50pct", "indicator": "dlq", "operator": ">=", "threshold": "0.50", "profile_id": "lockout"}
+  ],
+  "default_profile_id": "normal",
+  "allow_interest_principal_switch": true,
+  "periods": [
+    {
+      "index": 0,
+      "beginning_pool_balance": "1000.00",
+      "interest_collections": "60.00",
+      "principal_collections": "100.00",
+      "realized_losses": "0.00",
+      "indicators": {"dlq": "0.10"}
+    },
+    {
+      "index": 1,
+      "beginning_pool_balance": "900.00",
+      "interest_collections": "50.00",
+      "principal_collections": "120.00",
+      "realized_losses": "30.00",
+      "indicators": {"dlq": "0.60"}
+    },
+    {
+      "index": 2,
+      "beginning_pool_balance": "750.00",
+      "interest_collections": "40.00",
+      "principal_collections": "80.00",
+      "realized_losses": "10.00",
+      "indicators": {"dlq": "0.20"}
+    }
+  ]
+}
