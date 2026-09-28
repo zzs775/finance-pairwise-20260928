@@ -1,0 +1,8 @@
+# sample: cash dividend + 10:1 consolidation
+POS p1|alice|AAA|1|0|105
+POS p2|bob|AAA|1|1|3
+POS p3|carol|AAA|2|0|-40
+POS p4|alice|AAA|12|0|500
+DIV d1|1|-|AAA|10|11|15|5|0|500000000
+SPL s1|1|-|AAA|20|21|25|5|0|1|10|4000000000
+RES s1|alice
