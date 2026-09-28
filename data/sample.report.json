@@ -1,0 +1,1046 @@
+{
+  "benchmark": {
+    "price": "mid",
+    "time": "parent_arrival"
+  },
+  "duplicates": [
+    {
+      "occurrences": 2,
+      "recordKey": "fill:f-1"
+    },
+    {
+      "occurrences": 2,
+      "recordKey": "quote:AA:3"
+    }
+  ],
+  "errors": [],
+  "global": {
+    "delayCost": {
+      "amount": "7.2",
+      "formula": {
+        "expression": "sum(parent.delayCost)",
+        "operands": [
+          {
+            "name": "delayTotal",
+            "scale": 9,
+            "value": "7.2"
+          }
+        ]
+      },
+      "key": "delay"
+    },
+    "feeCost": {
+      "amount": "0.95",
+      "formula": {
+        "expression": "sum(parent.feeCost)",
+        "operands": [
+          {
+            "name": "feeTotal",
+            "scale": 9,
+            "value": "0.95"
+          }
+        ]
+      },
+      "key": "fee"
+    },
+    "opportunityCost": {
+      "amount": "14",
+      "formula": {
+        "expression": "sum(parent.opportunityCost)",
+        "operands": [
+          {
+            "name": "opportunityTotal",
+            "scale": 9,
+            "value": "14"
+          }
+        ]
+      },
+      "key": "opportunity"
+    },
+    "parentResults": [
+      {
+        "arrivalPrice": {
+          "ask": "100.5",
+          "bid": "99.5",
+          "seq": 1,
+          "source": "AA",
+          "time": 1000
+        },
+        "childResults": [
+          {
+            "arrivalPrice": {
+              "ask": "100.5",
+              "bid": "99.5",
+              "seq": 1,
+              "source": "AA",
+              "time": 1000
+            },
+            "childId": "c-buy-1",
+            "deadlinePrice": {
+              "ask": "102",
+              "bid": "101",
+              "seq": 4,
+              "source": "AA",
+              "time": 2000
+            },
+            "delayCost": {
+              "amount": "1.2",
+              "formula": {
+                "expression": "sign * qty * (releaseMid - arrivalMid) / 10^9",
+                "operands": [
+                  {
+                    "name": "sign",
+                    "scale": 9,
+                    "value": "1"
+                  },
+                  {
+                    "name": "qty",
+                    "scale": 9,
+                    "value": "6"
+                  },
+                  {
+                    "name": "arrivalBid",
+                    "scale": 9,
+                    "value": "99.5"
+                  },
+                  {
+                    "name": "arrivalAsk",
+                    "scale": 9,
+                    "value": "100.5"
+                  },
+                  {
+                    "name": "arrivalMidNumerator",
+                    "scale": 9,
+                    "value": "200"
+                  },
+                  {
+                    "name": "arrivalMidDenominator",
+                    "scale": 0,
+                    "value": "2"
+                  },
+                  {
+                    "name": "releaseBid",
+                    "scale": 9,
+                    "value": "99.8"
+                  },
+                  {
+                    "name": "releaseAsk",
+                    "scale": 9,
+                    "value": "100.6"
+                  },
+                  {
+                    "name": "releaseMidNumerator",
+                    "scale": 9,
+                    "value": "200.4"
+                  },
+                  {
+                    "name": "releaseMidDenominator",
+                    "scale": 0,
+                    "value": "2"
+                  },
+                  {
+                    "name": "releaseMid",
+                    "scale": 9,
+                    "value": "100.2"
+                  },
+                  {
+                    "name": "arrivalMid",
+                    "scale": 9,
+                    "value": "100"
+                  }
+                ]
+              },
+              "key": "delay"
+            },
+            "feeCost": {
+              "amount": "0.2",
+              "formula": {
+                "expression": "sum(fill.fee)",
+                "operands": [
+                  {
+                    "name": "fillFeeTotal",
+                    "scale": 9,
+                    "value": "0.2"
+                  }
+                ]
+              },
+              "key": "fee"
+            },
+            "filledQty": "6",
+            "orderedQty": "6",
+            "parentId": "p-buy",
+            "releasePrice": {
+              "ask": "100.6",
+              "bid": "99.8",
+              "seq": 2,
+              "source": "AA",
+              "time": 1200
+            },
+            "side": "BUY",
+            "tradingCost": {
+              "amount": "5.8",
+              "formula": {
+                "expression": "sign * sum(fill.qty * (fill.price - releaseMid)) / 10^9",
+                "operands": [
+                  {
+                    "name": "sign",
+                    "scale": 9,
+                    "value": "1"
+                  },
+                  {
+                    "name": "fill_0_qty[f-1]",
+                    "scale": 9,
+                    "value": "4"
+                  },
+                  {
+                    "name": "fill_0_price[f-1]",
+                    "scale": 9,
+                    "value": "101"
+                  },
+                  {
+                    "name": "fill_0_cost",
+                    "scale": 9,
+                    "value": "3.2"
+                  },
+                  {
+                    "name": "fill_1_qty[f-2]",
+                    "scale": 9,
+                    "value": "2"
+                  },
+                  {
+                    "name": "fill_1_price[f-2]",
+                    "scale": 9,
+                    "value": "101.5"
+                  },
+                  {
+                    "name": "fill_1_cost",
+                    "scale": 9,
+                    "value": "2.6"
+                  },
+                  {
+                    "name": "releaseMid",
+                    "scale": 9,
+                    "value": "100.2"
+                  }
+                ]
+              },
+              "key": "trading"
+            },
+            "twap": {
+              "coveredDurationMs": 800,
+              "denominator": "800",
+              "durationMs": 800,
+              "gaps": [],
+              "numerator": "80560",
+              "segments": [
+                {
+                  "durationMs": 300,
+                  "endTime": 1500,
+                  "mid": "100.2",
+                  "midNumerator": "200.4",
+                  "seq": 2,
+                  "source": "AA",
+                  "startTime": 1200
+                },
+                {
+                  "durationMs": 500,
+                  "endTime": 2000,
+                  "mid": "101",
+                  "midNumerator": "202",
+                  "seq": 3,
+                  "source": "AA",
+                  "startTime": 1500
+                }
+              ],
+              "twap": "100.7"
+            },
+            "vwap": "101.166666666"
+          },
+          {
+            "arrivalPrice": {
+              "ask": "100.5",
+              "bid": "99.5",
+              "seq": 1,
+              "source": "AA",
+              "time": 1000
+            },
+            "childId": "c-buy-2",
+            "deadlinePrice": {
+              "ask": "104",
+              "bid": "103",
+              "seq": 5,
+              "source": "AA",
+              "time": 3000
+            },
+            "delayCost": {
+              "amount": "6",
+              "formula": {
+                "expression": "sign * qty * (releaseMid - arrivalMid) / 10^9",
+                "operands": [
+                  {
+                    "name": "sign",
+                    "scale": 9,
+                    "value": "1"
+                  },
+                  {
+                    "name": "qty",
+                    "scale": 9,
+                    "value": "4"
+                  },
+                  {
+                    "name": "arrivalBid",
+                    "scale": 9,
+                    "value": "99.5"
+                  },
+                  {
+                    "name": "arrivalAsk",
+                    "scale": 9,
+                    "value": "100.5"
+                  },
+                  {
+                    "name": "arrivalMidNumerator",
+                    "scale": 9,
+                    "value": "200"
+                  },
+                  {
+                    "name": "arrivalMidDenominator",
+                    "scale": 0,
+                    "value": "2"
+                  },
+                  {
+                    "name": "releaseBid",
+                    "scale": 9,
+                    "value": "101"
+                  },
+                  {
+                    "name": "releaseAsk",
+                    "scale": 9,
+                    "value": "102"
+                  },
+                  {
+                    "name": "releaseMidNumerator",
+                    "scale": 9,
+                    "value": "203"
+                  },
+                  {
+                    "name": "releaseMidDenominator",
+                    "scale": 0,
+                    "value": "2"
+                  },
+                  {
+                    "name": "releaseMid",
+                    "scale": 9,
+                    "value": "101.5"
+                  },
+                  {
+                    "name": "arrivalMid",
+                    "scale": 9,
+                    "value": "100"
+                  }
+                ]
+              },
+              "key": "delay"
+            },
+            "feeCost": {
+              "amount": "0",
+              "formula": {
+                "expression": "sum(fill.fee)",
+                "operands": [
+                  {
+                    "name": "fillFeeTotal",
+                    "scale": 9,
+                    "value": "0"
+                  }
+                ]
+              },
+              "key": "fee"
+            },
+            "filledQty": "0",
+            "orderedQty": "4",
+            "parentId": "p-buy",
+            "releasePrice": {
+              "ask": "102",
+              "bid": "101",
+              "seq": 4,
+              "source": "AA",
+              "time": 2000
+            },
+            "side": "BUY",
+            "tradingCost": {
+              "amount": "0",
+              "formula": {
+                "expression": "0",
+                "operands": [
+                  {
+                    "name": "zero",
+                    "scale": 9,
+                    "value": "0"
+                  }
+                ]
+              },
+              "key": "trading"
+            },
+            "twap": {
+              "coveredDurationMs": 1000,
+              "denominator": "1000",
+              "durationMs": 1000,
+              "gaps": [],
+              "numerator": "101500",
+              "segments": [
+                {
+                  "durationMs": 1000,
+                  "endTime": 3000,
+                  "mid": "101.5",
+                  "midNumerator": "203",
+                  "seq": 4,
+                  "source": "AA",
+                  "startTime": 2000
+                }
+              ],
+              "twap": "101.5"
+            },
+            "vwap": null
+          }
+        ],
+        "deadlinePrice": {
+          "ask": "104",
+          "bid": "103",
+          "seq": 5,
+          "source": "AA",
+          "time": 3000
+        },
+        "delayCost": {
+          "amount": "7.2",
+          "formula": {
+            "expression": "sum(child.delayCost)",
+            "operands": [
+              {
+                "name": "delayTotal",
+                "scale": 9,
+                "value": "7.2"
+              }
+            ]
+          },
+          "key": "delay"
+        },
+        "feeCost": {
+          "amount": "0.7",
+          "formula": {
+            "expression": "sum(child.fill.fee) + parent.fee",
+            "operands": [
+              {
+                "name": "childFeeTotal",
+                "scale": 9,
+                "value": "0.2"
+              },
+              {
+                "name": "parentFee",
+                "scale": 9,
+                "value": "0.5"
+              }
+            ]
+          },
+          "key": "fee"
+        },
+        "filledQty": "6",
+        "opportunityCost": {
+          "amount": "14",
+          "formula": {
+            "expression": "sign * unfilledQty * (deadlineMid - arrivalMid) / 10^9",
+            "operands": [
+              {
+                "name": "sign",
+                "scale": 9,
+                "value": "1"
+              },
+              {
+                "name": "orderedQty",
+                "scale": 9,
+                "value": "10"
+              },
+              {
+                "name": "filledQty",
+                "scale": 9,
+                "value": "6"
+              },
+              {
+                "name": "unfilledQty",
+                "scale": 9,
+                "value": "4"
+              },
+              {
+                "name": "arrivalBid",
+                "scale": 9,
+                "value": "99.5"
+              },
+              {
+                "name": "arrivalAsk",
+                "scale": 9,
+                "value": "100.5"
+              },
+              {
+                "name": "arrivalMidNumerator",
+                "scale": 9,
+                "value": "200"
+              },
+              {
+                "name": "arrivalMidDenominator",
+                "scale": 0,
+                "value": "2"
+              },
+              {
+                "name": "deadlineBid",
+                "scale": 9,
+                "value": "103"
+              },
+              {
+                "name": "deadlineAsk",
+                "scale": 9,
+                "value": "104"
+              },
+              {
+                "name": "deadlineMidNumerator",
+                "scale": 9,
+                "value": "207"
+              },
+              {
+                "name": "deadlineMidDenominator",
+                "scale": 0,
+                "value": "2"
+              },
+              {
+                "name": "arrivalMid",
+                "scale": 9,
+                "value": "100"
+              },
+              {
+                "name": "deadlineMid",
+                "scale": 9,
+                "value": "103.5"
+              }
+            ]
+          },
+          "key": "opportunity"
+        },
+        "orderedQty": "10",
+        "parentId": "p-buy",
+        "parentTwap": {
+          "coveredDurationMs": 2000,
+          "denominator": "2000",
+          "durationMs": 2000,
+          "gaps": [],
+          "numerator": "202060",
+          "segments": [
+            {
+              "durationMs": 200,
+              "endTime": 1200,
+              "mid": "100",
+              "midNumerator": "200",
+              "seq": 1,
+              "source": "AA",
+              "startTime": 1000
+            },
+            {
+              "durationMs": 300,
+              "endTime": 1500,
+              "mid": "100.2",
+              "midNumerator": "200.4",
+              "seq": 2,
+              "source": "AA",
+              "startTime": 1200
+            },
+            {
+              "durationMs": 500,
+              "endTime": 2000,
+              "mid": "101",
+              "midNumerator": "202",
+              "seq": 3,
+              "source": "AA",
+              "startTime": 1500
+            },
+            {
+              "durationMs": 1000,
+              "endTime": 3000,
+              "mid": "101.5",
+              "midNumerator": "203",
+              "seq": 4,
+              "source": "AA",
+              "startTime": 2000
+            }
+          ],
+          "twap": "101.03"
+        },
+        "side": "BUY",
+        "symbol": "AAA",
+        "totalShortfall": {
+          "amount": "27.7",
+          "formula": {
+            "expression": "delay + trading + opportunity + fee",
+            "operands": [
+              {
+                "name": "delay",
+                "scale": 9,
+                "value": "7.2"
+              },
+              {
+                "name": "trading",
+                "scale": 9,
+                "value": "5.8"
+              },
+              {
+                "name": "opportunity",
+                "scale": 9,
+                "value": "14"
+              },
+              {
+                "name": "fee",
+                "scale": 9,
+                "value": "0.7"
+              }
+            ]
+          },
+          "key": "total"
+        },
+        "tradingCost": {
+          "amount": "5.8",
+          "formula": {
+            "expression": "sum(child.tradingCost)",
+            "operands": [
+              {
+                "name": "tradingTotal",
+                "scale": 9,
+                "value": "5.8"
+              }
+            ]
+          },
+          "key": "trading"
+        }
+      },
+      {
+        "arrivalPrice": {
+          "ask": "49.5",
+          "bid": "49",
+          "seq": 1,
+          "source": "Q1",
+          "time": 1000
+        },
+        "childResults": [
+          {
+            "arrivalPrice": {
+              "ask": "49.5",
+              "bid": "49",
+              "seq": 1,
+              "source": "Q1",
+              "time": 1000
+            },
+            "childId": "c-sell-1",
+            "deadlinePrice": {
+              "ask": "50.6",
+              "bid": "50",
+              "seq": 3,
+              "source": "Q1",
+              "time": 2000
+            },
+            "delayCost": {
+              "amount": "0",
+              "formula": {
+                "expression": "sign * qty * (releaseMid - arrivalMid) / 10^9",
+                "operands": [
+                  {
+                    "name": "sign",
+                    "scale": 9,
+                    "value": "-1"
+                  },
+                  {
+                    "name": "qty",
+                    "scale": 9,
+                    "value": "5"
+                  },
+                  {
+                    "name": "arrivalBid",
+                    "scale": 9,
+                    "value": "49"
+                  },
+                  {
+                    "name": "arrivalAsk",
+                    "scale": 9,
+                    "value": "49.5"
+                  },
+                  {
+                    "name": "arrivalMidNumerator",
+                    "scale": 9,
+                    "value": "98.5"
+                  },
+                  {
+                    "name": "arrivalMidDenominator",
+                    "scale": 0,
+                    "value": "2"
+                  },
+                  {
+                    "name": "releaseBid",
+                    "scale": 9,
+                    "value": "49"
+                  },
+                  {
+                    "name": "releaseAsk",
+                    "scale": 9,
+                    "value": "49.5"
+                  },
+                  {
+                    "name": "releaseMidNumerator",
+                    "scale": 9,
+                    "value": "98.5"
+                  },
+                  {
+                    "name": "releaseMidDenominator",
+                    "scale": 0,
+                    "value": "2"
+                  },
+                  {
+                    "name": "releaseMid",
+                    "scale": 9,
+                    "value": "49.25"
+                  },
+                  {
+                    "name": "arrivalMid",
+                    "scale": 9,
+                    "value": "49.25"
+                  }
+                ]
+              },
+              "key": "delay"
+            },
+            "feeCost": {
+              "amount": "0.05",
+              "formula": {
+                "expression": "sum(fill.fee)",
+                "operands": [
+                  {
+                    "name": "fillFeeTotal",
+                    "scale": 9,
+                    "value": "0.05"
+                  }
+                ]
+              },
+              "key": "fee"
+            },
+            "filledQty": "5",
+            "orderedQty": "5",
+            "parentId": "p-sell",
+            "releasePrice": {
+              "ask": "49.5",
+              "bid": "49",
+              "seq": 1,
+              "source": "Q1",
+              "time": 1000
+            },
+            "side": "SELL",
+            "tradingCost": {
+              "amount": "-4.75",
+              "formula": {
+                "expression": "sign * sum(fill.qty * (fill.price - releaseMid)) / 10^9",
+                "operands": [
+                  {
+                    "name": "sign",
+                    "scale": 9,
+                    "value": "-1"
+                  },
+                  {
+                    "name": "fill_0_qty[f-3]",
+                    "scale": 9,
+                    "value": "5"
+                  },
+                  {
+                    "name": "fill_0_price[f-3]",
+                    "scale": 9,
+                    "value": "50.2"
+                  },
+                  {
+                    "name": "fill_0_cost",
+                    "scale": 9,
+                    "value": "-4.75"
+                  },
+                  {
+                    "name": "releaseMid",
+                    "scale": 9,
+                    "value": "49.25"
+                  }
+                ]
+              },
+              "key": "trading"
+            },
+            "twap": {
+              "coveredDurationMs": 1000,
+              "denominator": "1000",
+              "durationMs": 1000,
+              "gaps": [],
+              "numerator": "49590",
+              "segments": [
+                {
+                  "durationMs": 600,
+                  "endTime": 1600,
+                  "mid": "49.25",
+                  "midNumerator": "98.5",
+                  "seq": 1,
+                  "source": "Q1",
+                  "startTime": 1000
+                },
+                {
+                  "durationMs": 400,
+                  "endTime": 2000,
+                  "mid": "50.1",
+                  "midNumerator": "100.2",
+                  "seq": 2,
+                  "source": "Q1",
+                  "startTime": 1600
+                }
+              ],
+              "twap": "49.59"
+            },
+            "vwap": "50.2"
+          }
+        ],
+        "deadlinePrice": {
+          "ask": "50.6",
+          "bid": "50",
+          "seq": 3,
+          "source": "Q1",
+          "time": 2000
+        },
+        "delayCost": {
+          "amount": "0",
+          "formula": {
+            "expression": "sum(child.delayCost)",
+            "operands": [
+              {
+                "name": "delayTotal",
+                "scale": 9,
+                "value": "0"
+              }
+            ]
+          },
+          "key": "delay"
+        },
+        "feeCost": {
+          "amount": "0.25",
+          "formula": {
+            "expression": "sum(child.fill.fee) + parent.fee",
+            "operands": [
+              {
+                "name": "childFeeTotal",
+                "scale": 9,
+                "value": "0.05"
+              },
+              {
+                "name": "parentFee",
+                "scale": 9,
+                "value": "0.2"
+              }
+            ]
+          },
+          "key": "fee"
+        },
+        "filledQty": "5",
+        "opportunityCost": {
+          "amount": "0",
+          "formula": {
+            "expression": "sign * unfilledQty * (deadlineMid - arrivalMid) / 10^9",
+            "operands": [
+              {
+                "name": "sign",
+                "scale": 9,
+                "value": "-1"
+              },
+              {
+                "name": "orderedQty",
+                "scale": 9,
+                "value": "5"
+              },
+              {
+                "name": "filledQty",
+                "scale": 9,
+                "value": "5"
+              },
+              {
+                "name": "unfilledQty",
+                "scale": 9,
+                "value": "0"
+              },
+              {
+                "name": "arrivalBid",
+                "scale": 9,
+                "value": "49"
+              },
+              {
+                "name": "arrivalAsk",
+                "scale": 9,
+                "value": "49.5"
+              },
+              {
+                "name": "arrivalMidNumerator",
+                "scale": 9,
+                "value": "98.5"
+              },
+              {
+                "name": "arrivalMidDenominator",
+                "scale": 0,
+                "value": "2"
+              },
+              {
+                "name": "deadlineBid",
+                "scale": 9,
+                "value": "50"
+              },
+              {
+                "name": "deadlineAsk",
+                "scale": 9,
+                "value": "50.6"
+              },
+              {
+                "name": "deadlineMidNumerator",
+                "scale": 9,
+                "value": "100.6"
+              },
+              {
+                "name": "deadlineMidDenominator",
+                "scale": 0,
+                "value": "2"
+              },
+              {
+                "name": "arrivalMid",
+                "scale": 9,
+                "value": "49.25"
+              },
+              {
+                "name": "deadlineMid",
+                "scale": 9,
+                "value": "50.3"
+              }
+            ]
+          },
+          "key": "opportunity"
+        },
+        "orderedQty": "5",
+        "parentId": "p-sell",
+        "parentTwap": {
+          "coveredDurationMs": 1000,
+          "denominator": "1000",
+          "durationMs": 1000,
+          "gaps": [],
+          "numerator": "49590",
+          "segments": [
+            {
+              "durationMs": 600,
+              "endTime": 1600,
+              "mid": "49.25",
+              "midNumerator": "98.5",
+              "seq": 1,
+              "source": "Q1",
+              "startTime": 1000
+            },
+            {
+              "durationMs": 400,
+              "endTime": 2000,
+              "mid": "50.1",
+              "midNumerator": "100.2",
+              "seq": 2,
+              "source": "Q1",
+              "startTime": 1600
+            }
+          ],
+          "twap": "49.59"
+        },
+        "side": "SELL",
+        "symbol": "BBB",
+        "totalShortfall": {
+          "amount": "-4.5",
+          "formula": {
+            "expression": "delay + trading + opportunity + fee",
+            "operands": [
+              {
+                "name": "delay",
+                "scale": 9,
+                "value": "0"
+              },
+              {
+                "name": "trading",
+                "scale": 9,
+                "value": "-4.75"
+              },
+              {
+                "name": "opportunity",
+                "scale": 9,
+                "value": "0"
+              },
+              {
+                "name": "fee",
+                "scale": 9,
+                "value": "0.25"
+              }
+            ]
+          },
+          "key": "total"
+        },
+        "tradingCost": {
+          "amount": "-4.75",
+          "formula": {
+            "expression": "sum(child.tradingCost)",
+            "operands": [
+              {
+                "name": "tradingTotal",
+                "scale": 9,
+                "value": "-4.75"
+              }
+            ]
+          },
+          "key": "trading"
+        }
+      }
+    ],
+    "totalShortfall": {
+      "amount": "23.2",
+      "formula": {
+        "expression": "delay + trading + opportunity + fee",
+        "operands": [
+          {
+            "name": "delay",
+            "scale": 9,
+            "value": "7.2"
+          },
+          {
+            "name": "trading",
+            "scale": 9,
+            "value": "1.05"
+          },
+          {
+            "name": "opportunity",
+            "scale": 9,
+            "value": "14"
+          },
+          {
+            "name": "fee",
+            "scale": 9,
+            "value": "0.95"
+          }
+        ]
+      },
+      "key": "total"
+    },
+    "tradingCost": {
+      "amount": "1.05",
+      "formula": {
+        "expression": "sum(parent.tradingCost)",
+        "operands": [
+          {
+            "name": "tradingTotal",
+            "scale": 9,
+            "value": "1.05"
+          }
+        ]
+      },
+      "key": "trading"
+    }
+  },
+  "scale": 9,
+  "status": "ok"
+}

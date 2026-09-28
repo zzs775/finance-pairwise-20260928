@@ -1,0 +1,177 @@
+{
+  "records": [
+    {
+      "kind": "parent",
+      "id": "p-buy",
+      "symbol": "AAA",
+      "side": "BUY",
+      "qty": "10",
+      "arrivalTime": "1000",
+      "deadlineTime": "3000",
+      "fee": "0.50"
+    },
+    {
+      "kind": "child",
+      "id": "c-buy-1",
+      "parentId": "p-buy",
+      "releaseTime": "1200",
+      "deadlineTime": "2000",
+      "qty": "6",
+      "fee": "0"
+    },
+    {
+      "kind": "child",
+      "id": "c-buy-2",
+      "parentId": "p-buy",
+      "releaseTime": "2000",
+      "deadlineTime": "3000",
+      "qty": "4",
+      "fee": "0"
+    },
+    {
+      "kind": "fill",
+      "id": "f-1",
+      "childId": "c-buy-1",
+      "time": "1500",
+      "qty": "4",
+      "price": "101.00",
+      "fee": "0.10"
+    },
+    {
+      "kind": "fill",
+      "id": "f-2",
+      "childId": "c-buy-1",
+      "time": "1800",
+      "qty": "2",
+      "price": "101.50",
+      "fee": "0.10"
+    },
+    {
+      "kind": "parent",
+      "id": "p-sell",
+      "symbol": "BBB",
+      "side": "SELL",
+      "qty": "5",
+      "arrivalTime": "1000",
+      "deadlineTime": "2000",
+      "fee": "0.20"
+    },
+    {
+      "kind": "child",
+      "id": "c-sell-1",
+      "parentId": "p-sell",
+      "releaseTime": "1000",
+      "deadlineTime": "2000",
+      "qty": "5",
+      "fee": "0"
+    },
+    {
+      "kind": "fill",
+      "id": "f-3",
+      "childId": "c-sell-1",
+      "time": "1600",
+      "qty": "5",
+      "price": "50.20",
+      "fee": "0.05"
+    },
+    {
+      "kind": "quote",
+      "source": "ZB",
+      "seq": "1",
+      "symbol": "AAA",
+      "time": "1000",
+      "bid": "99.00",
+      "ask": "102.00"
+    },
+    {
+      "kind": "quote",
+      "source": "AA",
+      "seq": "1",
+      "symbol": "AAA",
+      "time": "1000",
+      "bid": "99.50",
+      "ask": "100.50"
+    },
+    {
+      "kind": "quote",
+      "source": "AA",
+      "seq": "2",
+      "symbol": "AAA",
+      "time": "1200",
+      "bid": "99.80",
+      "ask": "100.60"
+    },
+    {
+      "kind": "quote",
+      "source": "AA",
+      "seq": "3",
+      "symbol": "AAA",
+      "time": "1500",
+      "bid": "100.50",
+      "ask": "101.50"
+    },
+    {
+      "kind": "quote",
+      "source": "AA",
+      "seq": "4",
+      "symbol": "AAA",
+      "time": "2000",
+      "bid": "101.00",
+      "ask": "102.00"
+    },
+    {
+      "kind": "quote",
+      "source": "AA",
+      "seq": "5",
+      "symbol": "AAA",
+      "time": "3000",
+      "bid": "103.00",
+      "ask": "104.00"
+    },
+    {
+      "kind": "quote",
+      "source": "AA",
+      "seq": "3",
+      "symbol": "AAA",
+      "time": "1500",
+      "bid": "100.50",
+      "ask": "101.50"
+    },
+    {
+      "kind": "quote",
+      "source": "Q1",
+      "seq": "1",
+      "symbol": "BBB",
+      "time": "1000",
+      "bid": "49.00",
+      "ask": "49.50"
+    },
+    {
+      "kind": "quote",
+      "source": "Q1",
+      "seq": "2",
+      "symbol": "BBB",
+      "time": "1600",
+      "bid": "49.80",
+      "ask": "50.40"
+    },
+    {
+      "kind": "quote",
+      "source": "Q1",
+      "seq": "3",
+      "symbol": "BBB",
+      "time": "2000",
+      "bid": "50.00",
+      "ask": "50.60"
+    },
+    {
+      "kind": "fill",
+      "id": "f-1",
+      "childId": "c-buy-1",
+      "time": "1500",
+      "qty": "4",
+      "price": "101.00",
+      "fee": "0.10"
+    }
+  ]
+}

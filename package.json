@@ -1,0 +1,14 @@
+{
+  "name": "is-analyzer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Implementation shortfall analyzer (VWAP/TWAP/cost attribution) on bigint fixed-point",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test --experimental-test-isolation=none \"dist/test/**/*.test.js\"",
+    "start": "node dist/src/cli.js",
+    "sample": "node dist/src/cli.js --sample"
+  },
+  "devDependencies": {}
+}
