@@ -1,0 +1,46 @@
+{
+  "as_of": "2026-03-31T00:00:00Z",
+  "agreements": [
+    {
+      "netting_set": "NS-A",
+      "version": 1,
+      "currency": "USD",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-03-01T00:00:00Z",
+      "threshold": 1000,
+      "mta": 250,
+      "independent_amount": 100
+    },
+    {
+      "netting_set": "NS-A",
+      "version": 2,
+      "currency": "USD",
+      "start": "2026-03-01T00:00:00Z",
+      "end": "",
+      "threshold": 500,
+      "mta": 300,
+      "independent_amount": 0
+    },
+    {
+      "netting_set": "NS-B",
+      "version": 1,
+      "currency": "EUR",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "",
+      "threshold": 0,
+      "mta": 0,
+      "independent_amount": 0
+    }
+  ],
+  "trades": [
+    {"id": "T1", "netting_set": "NS-A", "currency": "USD", "mtm": 1200, "at": "2026-02-15T00:00:00Z"},
+    {"id": "T2", "netting_set": "NS-A", "currency": "USD", "mtm": 900, "at": "2026-03-15T00:00:00Z"},
+    {"id": "T3", "netting_set": "NS-B", "currency": "EUR", "mtm": -400, "at": "2026-03-15T00:00:00Z"},
+    {"id": "T4", "netting_set": "NS-B", "currency": "EUR", "mtm": 700, "at": "2026-03-20T00:00:00Z"}
+  ],
+  "collateral": [
+    {"netting_set": "NS-A", "currency": "USD", "amount": 100},
+    {"netting_set": "NS-B", "currency": "EUR", "amount": 50}
+  ],
+  "events": []
+}
