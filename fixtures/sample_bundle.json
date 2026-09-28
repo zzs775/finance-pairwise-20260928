@@ -1,0 +1,36 @@
+{
+  "base_currency": "CNY",
+  "start": "2026-01-01T09:00:00",
+  "end": "2026-01-02T09:00:00",
+  "assets": [
+    {"asset_id": "AAPL", "currency": "USD", "industry": "TECH"},
+    {"asset_id": "BOND", "currency": "CNY", "industry": "FI"}
+  ],
+  "start_positions": [
+    {"asset_id": "AAPL", "quantity": "10", "price": "150.00"},
+    {"asset_id": "BOND", "quantity": "20", "price": "99.50"}
+  ],
+  "trades": [
+    {
+      "trade_id": "T-1001",
+      "asset_id": "AAPL",
+      "instant": "2026-01-01T13:00:00",
+      "quantity": "2",
+      "price": "152.00",
+      "currency": "USD",
+      "version": {"sequence": 1, "label": "snap-1"}
+    }
+  ],
+  "prices": [
+    {"asset_id": "AAPL", "instant": "2026-01-01T13:00:00", "price": "152.00", "version": {"sequence": 1}},
+    {"asset_id": "AAPL", "instant": "2026-01-02T09:00:00", "price": "155.00", "version": {"sequence": 2}},
+    {"asset_id": "BOND", "instant": "2026-01-02T09:00:00", "price": "100.00", "version": {"sequence": 2}}
+  ],
+  "accruals": [
+    {"asset_id": "BOND", "instant": "2026-01-02T00:00:00", "amount": "0.125", "currency": "CNY", "version": {"sequence": 2}}
+  ],
+  "fx": [
+    {"currency": "USD", "instant": "2026-01-01T09:00:00", "rate": "7.10000000", "version": {"sequence": 1}},
+    {"currency": "USD", "instant": "2026-01-02T09:00:00", "rate": "7.15000000", "version": {"sequence": 2}}
+  ]
+}
