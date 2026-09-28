@@ -1,0 +1,12 @@
+<linkbase>
+  <concept name="Revenues" type="monetary"/>
+  <concept name="ProductRevenue" type="monetary"/>
+  <concept name="ServiceRevenue" type="monetary"/>
+  <concept name="NetIncome" type="monetary"/>
+  <concept name="Income" type="monetary"/>
+  <concept name="Expense" type="monetary"/>
+  <arc role="income-statement" from="Revenues" to="ProductRevenue" weight="1" priority="0" order="1"/>
+  <arc role="income-statement" from="Revenues" to="ServiceRevenue" weight="1" priority="0" order="2"/>
+  <arc role="income-statement" from="NetIncome" to="Income" weight="1" priority="0" order="1"/>
+  <arc role="income-statement" from="NetIncome" to="Expense" weight="-1" priority="0" order="2"/>
+</linkbase>

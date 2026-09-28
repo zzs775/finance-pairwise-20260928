@@ -1,0 +1,7 @@
+<xbrl>
+  <context id="c1"><period><instant>2025-12-31</instant></period></context>
+  <unit id="usd"><measure>iso4217:USD</measure></unit>
+  <Assets contextRef="c1" unitRef="usd" decimals="0">1000</Assets>
+  <Cash contextRef="c1" unitRef="usd" decimals="0">600</Cash>
+  <AR contextRef="c1" unitRef="usd" decimals="0">399</AR>
+</xbrl>

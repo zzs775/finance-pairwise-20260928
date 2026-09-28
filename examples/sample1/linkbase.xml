@@ -1,0 +1,7 @@
+<linkbase>
+  <concept name="Assets" type="monetary"/>
+  <concept name="Cash" type="monetary"/>
+  <concept name="AR" type="monetary"/>
+  <arc role="balance-sheet" from="Assets" to="Cash" weight="1" priority="0" order="1"/>
+  <arc role="balance-sheet" from="Assets" to="AR" weight="1" priority="0" order="2"/>
+</linkbase>
