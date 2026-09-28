@@ -1,0 +1,21 @@
+# Floating equal-principal loan, quarterly, ACT/360.
+id = example-floating
+nominal = 250000.00
+valueDate = 2024-03-15
+firstPaymentDate = 2024-06-17
+maturityDate = 2024-12-16
+frequency = QUARTERLY
+dayCount = ACT_360
+amortization = EQUAL_PRINCIPAL
+stub = SHORT_FIRST
+businessDayConvention = FOLLOWING
+floating = true
+spread = 0.0125
+floor = 0.03
+cap = 0.08
+firstResetDate = 2024-03-15
+resetFrequency = QUARTERLY
+fixing.1 = 2024-03-15, 0.021, 1
+fixing.2 = 2024-06-15, 0.026, 1
+fixing.3 = 2024-09-15, 0.029, 1
+prepayment.1 = 2, 50000.00, SHORTEN_TERM
