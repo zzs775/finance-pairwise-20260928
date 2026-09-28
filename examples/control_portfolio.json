@@ -1,0 +1,43 @@
+{
+  "base_currency": "USD",
+  "period_start": "2026-01-01T00:00:00Z",
+  "period_end": "2026-01-03T00:00:00Z",
+  "assets": [
+    {"asset_id": "A1", "currency": "EUR", "industry": "tech"},
+    {"asset_id": "A2", "currency": "USD", "industry": "energy"}
+  ],
+  "start_positions": {
+    "A1": {"quantity": "10.000000", "accrued": "0.00000000", "snapshot": {"version": "snap-start", "asof": "2026-01-01T00:00:00Z"}},
+    "A2": {"quantity": "0.000000", "accrued": "0.00000000", "snapshot": {"version": "snap-start", "asof": "2026-01-01T00:00:00Z"}}
+  },
+  "end_positions": {
+    "A1": {"quantity": "13.000000", "accrued": "0.30000000", "snapshot": {"version": "snap-end", "asof": "2026-01-03T00:00:00Z"}},
+    "A2": {"quantity": "4.000000", "accrued": "0.00000000", "snapshot": {"version": "snap-end", "asof": "2026-01-03T00:00:00Z"}}
+  },
+  "transactions": [
+    {"txn_id": "T1", "asset_id": "A1", "when": "2026-01-02T00:00:00Z", "delta_qty": "3.000000", "price": "102.50000000", "currency": "EUR", "snapshot": {"version": "snap-t1", "asof": "2026-01-02T00:00:00Z"}},
+    {"txn_id": "T2", "asset_id": "A2", "when": "2026-01-02T00:00:00Z", "delta_qty": "4.000000", "price": "7.10000000", "currency": "USD", "snapshot": {"version": "snap-t2", "asof": "2026-01-02T00:00:00Z"}}
+  ],
+  "prices": [
+    {"asset_id": "A1", "when": "2026-01-01T00:00:00Z", "price": "100.00000000", "snapshot": {"version": "p-a1-0", "asof": "2026-01-01T00:00:00Z"}},
+    {"asset_id": "A1", "when": "2026-01-02T00:00:00Z", "price": "103.00000000", "snapshot": {"version": "p-a1-1", "asof": "2026-01-02T00:00:00Z"}},
+    {"asset_id": "A1", "when": "2026-01-03T00:00:00Z", "price": "104.00000000", "snapshot": {"version": "p-a1-2", "asof": "2026-01-03T00:00:00Z"}},
+    {"asset_id": "A2", "when": "2026-01-01T00:00:00Z", "price": "7.00000000", "snapshot": {"version": "p-a2-0", "asof": "2026-01-01T00:00:00Z"}},
+    {"asset_id": "A2", "when": "2026-01-02T00:00:00Z", "price": "7.10000000", "snapshot": {"version": "p-a2-1", "asof": "2026-01-02T00:00:00Z"}},
+    {"asset_id": "A2", "when": "2026-01-03T00:00:00Z", "price": "7.50000000", "snapshot": {"version": "p-a2-2", "asof": "2026-01-03T00:00:00Z"}}
+  ],
+  "accruals": [
+    {"asset_id": "A1", "when": "2026-01-01T00:00:00Z", "accrued": "0.00000000", "snapshot": {"version": "i-a1-0", "asof": "2026-01-01T00:00:00Z"}},
+    {"asset_id": "A1", "when": "2026-01-02T00:00:00Z", "accrued": "0.10000000", "snapshot": {"version": "i-a1-1", "asof": "2026-01-02T00:00:00Z"}},
+    {"asset_id": "A1", "when": "2026-01-03T00:00:00Z", "accrued": "0.30000000", "snapshot": {"version": "i-a1-2", "asof": "2026-01-03T00:00:00Z"}},
+    {"asset_id": "A2", "when": "2026-01-01T00:00:00Z", "accrued": "0.00000000", "snapshot": {"version": "i-a2-0", "asof": "2026-01-01T00:00:00Z"}},
+    {"asset_id": "A2", "when": "2026-01-03T00:00:00Z", "accrued": "0.00000000", "snapshot": {"version": "i-a2-2", "asof": "2026-01-03T00:00:00Z"}}
+  ],
+  "fx": [
+    {"currency": "EUR", "when": "2026-01-01T00:00:00Z", "fx_to_base": "1.1000000000", "snapshot": {"version": "fx-eur-0", "asof": "2026-01-01T00:00:00Z"}},
+    {"currency": "EUR", "when": "2026-01-02T00:00:00Z", "fx_to_base": "1.1200000000", "snapshot": {"version": "fx-eur-1", "asof": "2026-01-02T00:00:00Z"}},
+    {"currency": "EUR", "when": "2026-01-03T00:00:00Z", "fx_to_base": "1.1500000000", "snapshot": {"version": "fx-eur-2", "asof": "2026-01-03T00:00:00Z"}},
+    {"currency": "USD", "when": "2026-01-01T00:00:00Z", "fx_to_base": "1.0000000000", "snapshot": {"version": "fx-usd-0", "asof": "2026-01-01T00:00:00Z"}},
+    {"currency": "USD", "when": "2026-01-03T00:00:00Z", "fx_to_base": "1.0000000000", "snapshot": {"version": "fx-usd-2", "asof": "2026-01-03T00:00:00Z"}}
+  ]
+}
