@@ -1,0 +1,28 @@
+{
+  "version_id": "2026-01-01",
+  "valuation_date": "2026-01-01",
+  "calendar": {
+    "name": "embedded",
+    "holidays": ["2026-07-03"]
+  },
+  "deposits": [
+    {"name": "DEPO3M", "start": "2026-01-01", "maturity": "2026-04-01", "rate": "0.0300"},
+    {"name": "DEPO6M", "start": "2026-01-01", "maturity": "2026-07-01", "rate": "0.0320"}
+  ],
+  "fras": [
+    {"name": "FRA6x9", "start": "2026-07-01", "maturity": "2026-10-01", "rate": "0.0340"}
+  ],
+  "swaps": [
+    {"name": "SWAP1Y", "effective": "2026-01-01", "maturity": "2027-01-01", "fixed_rate": "0.0360", "period_months": 6},
+    {"name": "SWAP2Y", "effective": "2026-01-01", "maturity": "2028-01-01", "fixed_rate": "0.0380", "period_months": 6}
+  ],
+  "bonds": [
+    {
+      "name": "BOND-A",
+      "cash_flows": [
+        {"payment_date": "2026-07-01", "amount": "3.00"},
+        {"payment_date": "2027-01-01", "amount": "103.00"}
+      ]
+    }
+  ]
+}
