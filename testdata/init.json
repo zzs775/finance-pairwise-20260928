@@ -1,0 +1,14 @@
+{
+  "reference": 10000,
+  "rules": {
+    "version": 1,
+    "horizon": 10,
+    "level1_bp": 500,
+    "level2_bp": 1000,
+    "level3_bp": 2000,
+    "recover_bp": 100,
+    "halt1_ticks": 5,
+    "halt2_ticks": 10,
+    "cooldown_ticks": 3
+  }
+}

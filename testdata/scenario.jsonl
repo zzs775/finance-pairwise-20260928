@@ -1,0 +1,6 @@
+{"kind":"reference","time":10,"seq":1,"rule_version":2,"price":10000}
+{"kind":"rules","time":10,"seq":2,"rule_version":2,"rules":{"version":2,"horizon":10,"level1_bp":500,"level2_bp":1000,"level3_bp":2000,"recover_bp":100,"halt1_ticks":5,"halt2_ticks":10,"cooldown_ticks":3}}
+{"kind":"trade","time":11,"seq":3,"rule_version":2,"price":9499}
+{"kind":"trade","time":12,"seq":4,"rule_version":2,"price":8999}
+{"kind":"trade","time":22,"seq":5,"rule_version":2,"price":9991}
+{"kind":"trade","time":26,"seq":6,"rule_version":2,"price":9991}
