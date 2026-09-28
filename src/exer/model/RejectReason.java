@@ -1,0 +1,13 @@
+package exer.model;
+
+/** 分类拒绝原因。 */
+public enum RejectReason {
+    DUPLICATE_NOTICE,
+    OVER_EXERCISE,
+    EXPIRED_CONTRACT,
+    ILLEGAL_DELIVERABLE,
+    ZERO_ELIGIBLE_SHORT,
+    UNKNOWN_CONTRACT,
+    INVALID_NOTICE,
+    INJECTED_FAILURE
+}
