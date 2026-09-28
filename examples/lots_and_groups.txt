@@ -1,0 +1,12 @@
+# Lot conflicts, groups and tiered (step) fees.
+cash 5000000
+asset AAA 1000000 100 100 4000 0 10000
+asset BBB 2000000 100 100 3000 0 10000
+asset CCC 1000000 100 100 3000 0 10000
+groupof AAA equity
+groupof BBB equity
+groupof CCC cash
+grouplimit equity 0 8000
+# 2% up to 10 notional, then 0.5%; tiers must partition without gaps.
+fee 0 10000000 20000
+fee 10000000 inf 5000

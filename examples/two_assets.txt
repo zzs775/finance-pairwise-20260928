@@ -1,0 +1,7 @@
+# Local synthetic portfolio: no external data.
+# Values are scaled integers (price/cash: 1e6 per unit; weights: bps).
+cash 1000000
+asset AAA 1000000 5 1 5000 0 10000
+asset BBB 1000000 5 1 5000 0 10000
+# 1% flat fee
+fee 0 inf 10000
