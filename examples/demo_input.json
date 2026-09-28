@@ -1,0 +1,45 @@
+{
+  "assumptions": {
+    "version": "demo-v1",
+    "effective_date": "2026-01-31",
+    "scenarios": [
+      {"name": "base", "weight": "0.60"},
+      {"name": "adverse", "weight": "0.40"}
+    ]
+  },
+  "contracts": [
+    {
+      "contract_id": "ANON-0001",
+      "stage": 1,
+      "remaining_periods": 3,
+      "curves": {
+        "cumulative_pd": ["0.01", "0.025", "0.04"],
+        "lgd": ["0.45", "0.45", "0.45"],
+        "ead": ["100000", "98000", "96000"],
+        "discount": ["0.995", "0.985", "0.970"]
+      }
+    },
+    {
+      "contract_id": "ANON-0002",
+      "stage": 2,
+      "remaining_periods": 4,
+      "curves": {
+        "cumulative_pd": ["0.03", "0.07", "0.12", "0.18"],
+        "lgd": ["0.50", "0.50", "0.50", "0.50"],
+        "ead": ["250000", "245000", "240000", "235000"],
+        "discount": ["0.990", "0.975", "0.955", "0.930"]
+      }
+    },
+    {
+      "contract_id": "ANON-0003",
+      "stage": 3,
+      "remaining_periods": 2,
+      "curves": {
+        "cumulative_pd": ["0.80", "0.85"],
+        "lgd": ["0.60", "0.60"],
+        "ead": ["75000", "70000"],
+        "discount": ["0.980", "0.950"]
+      }
+    }
+  ]
+}
