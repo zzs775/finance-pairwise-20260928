@@ -1,0 +1,8 @@
+[project]
+name = "chainladder-revisable"
+version = "0.1.0"
+description = "可修订赔付三角形链梯法引擎（纯标准库）"
+requires-python = ">=3.13"
+
+[project.scripts]
+chainladder = "chainladder.cli:main"
