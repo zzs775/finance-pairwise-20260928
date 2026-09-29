@@ -1,0 +1,16 @@
+[package]
+name = "mktcodec"
+version = "0.1.0"
+edition = "2021"
+description = "Local synthetic market-quote time-series segmented codec (std-only)"
+
+[lib]
+name = "mktcodec"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mktcodec"
+path = "src/main.rs"
+
+[profile.release]
+panic = "abort"
