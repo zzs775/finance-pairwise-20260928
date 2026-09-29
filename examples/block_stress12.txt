@@ -1,0 +1,74 @@
+name: stress12
+total: 1200
+
+account: A01
+target: 100
+min: 20
+max: 200
+lot: 10
+
+account: A02
+target: 120
+min: 0
+max: 220
+lot: 10
+
+account: A03
+target: 80
+min: 0
+max: 160
+lot: 5
+
+account: A04
+target: 90
+min: 10
+max: 180
+lot: 5
+
+account: A05
+target: 110
+min: 0
+max: 200
+lot: 2
+
+account: A06
+target: 70
+min: 0
+max: 150
+lot: 2
+
+account: A07
+target: 130
+min: 0
+max: 240
+lot: 1
+
+account: A08
+target: 60
+min: 0
+max: 120
+lot: 1
+
+account: A09
+target: 100
+min: 0
+max: 200
+lot: 10
+
+account: A10
+target: 90
+min: 0
+max: 180
+lot: 10
+
+account: A11
+target: 120
+min: 0
+max: 240
+lot: 5
+
+account: A12
+target: 130
+min: 0
+max: 260
+lot: 5

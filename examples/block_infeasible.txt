@@ -1,0 +1,22 @@
+# Infeasible: lot-aligned minimums (8+8=16) exceed the total (10).
+# The engine returns a minimum-cardinality conflict account set.
+name: block_infeasible
+total: 10
+
+account: A
+target: 4
+min: 8
+max: 10
+lot: 2
+
+account: B
+target: 3
+min: 8
+max: 10
+lot: 2
+
+account: C
+target: 3
+min: 0
+max: 10
+lot: 2

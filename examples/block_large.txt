@@ -1,0 +1,16 @@
+# Large unit-lot space. Use a small --node-budget to demonstrate the
+# BUDGET_EXHAUSTED_INCUMBENT state (incumbent + bounds, never "optimal").
+name: block_large
+total: 200
+
+account: A
+target: 100
+min: 0
+max: 200
+lot: 1
+
+account: B
+target: 100
+min: 0
+max: 200
+lot: 1
