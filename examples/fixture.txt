@@ -1,0 +1,33 @@
+# Loan covenant monitoring fixture - all borrowers and data are fictional.
+meta INCEPTION 2024-01-01
+
+# Quarterly certification periods (non-overlapping).
+period Q1 2024-01-01 2024-03-31
+period Q2 2024-04-01 2024-06-30
+
+# Financial facts (synthetic). DSCR = OI / DS must be >= 1.20.
+fact OI_Q1 NORTHWIND_FICTIONAL_LTD OI 150.00 USD FLOW 2024-01-01 2024-03-31 . 1
+fact DS_Q1 NORTHWIND_FICTIONAL_LTD DS 100.00 USD FLOW 2024-01-01 2024-03-31 . 1
+fact OI_Q2 NORTHWIND_FICTIONAL_LTD OI 110.00 USD FLOW 2024-04-01 2024-06-30 . 1
+fact DS_Q2 NORTHWIND_FICTIONAL_LTD DS 100.00 USD FLOW 2024-04-01 2024-06-30 . 1
+
+# Point-in-time minimum cash covenant measured at each quarter end.
+fact CASH_Q1 NORTHWIND_FICTIONAL_LTD CASH 250.00 USD STOCK . . 2024-03-31 1
+fact CASH_Q2 NORTHWIND_FICTIONAL_LTD CASH 80.00 USD STOCK . . 2024-06-30 1
+
+# Scheduled payment covenant (schedule reference equals covenant id).
+payment PMT_1 NORTHWIND_FICTIONAL_LTD PAY_SCHED 1000.00 USD 2024-05-15 2024-05-20
+
+# DSCR >= 1.20, 5-day grace.
+covenant COV_DSCR NORTHWIND_FICTIONAL_LTD RATIO 1.20 5
+metric COV_DSCR DSCR RATIO ROLLING_12 NONE FINAL 2 (/ OI@USD DS@USD)
+
+# Minimum cash 100.00 at quarter end, no grace.
+covenant COV_CASH NORTHWIND_FICTIONAL_LTD MINIMUM 100.00 0
+metric COV_CASH MIN_CASH USD POINT_IN_TIME NONE FINAL 2 CASH@USD
+
+# Payment timeliness with a 7-day grace window.
+covenant PAY_SCHED NORTHWIND_FICTIONAL_LTD PAYMENT_DATE 0 7
+
+# Waiver scoped to exactly one covenant and one period.
+waiver W_Q2_CASH COV_CASH Q2 2024-06-30 2024-09-30
