@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "life-reserves"
+version = "0.1.0"
+description = "Annual term life reserve engine (stdlib only, Decimal arithmetic)"
+requires-python = ">=3.13"
+
+[project.scripts]
+life-reserves = "life_reserves.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["life_reserves*"]
